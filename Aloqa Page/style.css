@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+.clip-box {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #000098;
+    clip-path: polygon(0% 60%, 2% 59%, 4% 59%, 7% 58%, 11% 57%, 14% 57%, 17% 56%, 19% 56%, 23% 56%, 26% 56%, 30% 55%, 34% 54%, 37% 54%, 41% 54%, 44% 53%, 47% 53%, 50% 52%, 53% 51%, 56% 50%, 60% 49%, 63% 49%, 66% 48%, 69% 48%, 72% 48%, 76% 47%, 80% 45%, 83% 44%, 86% 42%, 88% 41%, 91% 39%, 93% 37%, 97% 36%, 100% 35%, 100% 0%, 0% 0%);
+    z-index: -1;
+}
+.container {
+    position: relative;
+    width: 100%;
+}
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    width: 100%;
+    gap: 20px;
+}
+.top {
+    position: relative;
+}
+.top .wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.top .wrapper .box {
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background: rgba(0, 255, 242, 0.818);
+}
+.top .wrapper .box .icon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .box .icon i {
+    font-size: 38px;
+}
+.top .wrapper .box .text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+}
+.bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.bottom form {
+    background: rgba(0, 0, 0, 0.034);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 8px;
+    padding: 5px;
+}
+.bottom form .fluid{
+    width: 100%;
+    padding: 2px 4px 2px 4px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.bottom form input{
+    width: 100%;
+    padding: 2px 4px 2px 4px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    outline: none;
+}
+.bottom form input:hover {
+    background: silver;
+}
+.bottom form textarea{
+    border-radius: 5px;
+    resize: none;
+    border: 1px solid silver;
+}
+.bottom form button{
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    background: red;
+    border: 1px solid silver;
+    cursor: pointer;
+    color: white;
+}
+.bottom form button:hover {
+    background: rgba(255, 0, 0, 0.568);
+    color: gold;
+}
+.bottom form label{
+    width: 100%;
+    color: navy;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media (min-width:1048px){
+    .top .wrapper {
+        padding: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+    .top .wrapper .box {
+        height: 240px;
+    }
+    .wrapper .box .icon i {
+        font-size: 38px;
+    }
+    .top .wrapper .box .text {
+        font-size: 24px;
+    }
+}
+@media (max-width:1047.99px){
+    .top .wrapper {
+        padding: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+    .top .wrapper .box {
+        height: 160px;
+    }
+    .wrapper .box .icon i {
+        font-size: 30px;
+    }
+    .top .wrapper .box .text {
+        font-size: 20px;
+    }
+}
+@media (max-width:728px){
+    .top .wrapper {
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .top .wrapper .box {
+        height: 100px;
+    }
+    .wrapper .box .icon i {
+        font-size: 21px;
+    }
+    .top .wrapper .box .text {
+        font-size: 16px;
+    }
+}
+@media (max-width:448px){
+    .top .wrapper {
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .top .wrapper .box {
+        height: 120px;
+    }
+    .wrapper .box .icon i {
+        font-size: 24px;
+    }
+    .top .wrapper .box .text {
+        font-size: 14px;
+    }
+}
+
+p {
+    position: relative;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+p a {
+    text-decoration: none;
+    color: black;
+}
